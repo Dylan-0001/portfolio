@@ -1,0 +1,89 @@
+.expertise {
+  width: 100%;
+  padding: 80px 5%;
+
+  .expertise-line{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    margin-top: -12%;
+    
+  }
+
+  &__container {
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: 800;
+    color: #000000;
+
+    text-align: left;
+    margin-bottom: 50px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid #FF6060;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    &:nth-child(even) {
+      border-left-color: #8A2BE2;
+    }
+  }
+
+  &__card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  &__card-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+  }
+
+  &__percentage {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FF6060;
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #666;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 60px 5%;
+
+    &__title {
+      font-size: 36px;
+    }
+  }
+}

@@ -1,0 +1,126 @@
+.projects {
+  text-align: center;
+  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+  }
+
+    .project-line{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+  }
+
+  &__grid {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    gap: 0;
+    grid-template-areas:
+      "image1 image2 image3"
+      "image4 project image5";
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      gap: 1.5rem;
+      display: grid;
+      grid-template-areas: none;
+    }
+  }
+
+  .project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+    box-shadow: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: transparent;
+    width: max-content;
+    height: max-content;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    display: block;
+
+    &:nth-child(1) { grid-area: image1; }
+    &:nth-child(2) { grid-area: image2; }
+    &:nth-child(3) { grid-area: image3; }
+    &:nth-child(4) { grid-area: image4; }
+    &:nth-child(5) { grid-area: image5; }
+
+    &:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    &__image {
+      display: block;
+      transition: transform 0.5s ease;
+      margin: 0;
+      padding: 0;
+      vertical-align: top;
+    }
+
+    &:hover &__image {
+      transform: scale(1.08);
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+      height: auto;
+
+      &__image {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &__overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover &__overlay {
+      opacity: 1;
+    }
+
+    &__title {
+      color: #fff;
+      font-size: 1.4rem;
+      font-weight: 600;
+      padding: 0 1rem;
+      text-align: center;
+    }
+  }
+
+  &__button {
+    margin-top: 3rem;
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: #333;
+    }
+  }
+}
