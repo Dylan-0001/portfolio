@@ -1,19 +1,19 @@
 //VARIABLES & MIXINS
-@import 'variables';
-@import 'mixins';
+@use 'variables';
+@use 'mixins';
 
 //BASIC CSS
-@import './base';
+@use 'base';
 
 //Componenets
-@import './components/header';
-@import './components/footer';
+@use 'components/header';
+@use 'components/footer';
 
 //Home Section
-@import './home/hero-home';
-@import './home/project_home';
-@import './home/about-me';
-@import './home/experience';
-@import './home/expertise';
-@import './home/favourite-stack';
-@import './home/testimonials';
+@use 'home/hero-home';
+@use 'home/project_home';
+@use 'home/about-me';
+@use 'home/experience';
+@use 'home/expertise';
+@use 'home/favourite-stack';
+@use 'home/testimonials';

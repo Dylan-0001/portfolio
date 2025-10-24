@@ -1,7 +1,9 @@
+@use "variables";
+
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: $text-font;
+  font-family: variables.$text-font;
 }
 
 main{
