@@ -11,47 +11,18 @@ import reactIcon from "/src/assets/icons/React-icon.png";
 import scssIcon from "/src/assets/icons/scss-icon.png";
 
 const FavouriteStack = () => {
+
+
   const technologies = [
-    {
-      id: 1,
-      name: "Git",
-      icon: gitIcon,
-    },
-    {
-      id: 2,
-      name: "Java",
-      icon: javaIcon,
-    },
-    {
-      id: 3,
-      name: "Webflow",
-      icon: webflowIcon,
-    },
-    {
-      id: 4,
-      name: "Figma",
-      icon: figmaIcon,
-    },
-    {
-      id: 5,
-      name: "JavaScript",
-      icon: jsIcon,
-    },
-    {
-      id: 6,
-      name: "PostMan",
-      icon: postmanIcon,
-    },
-    {
-      id: 7,
-      name: "React",
-      icon: reactIcon,
-    },
-    {
-      id: 8,
-      name: "Scss",
-      icon: scssIcon,
-    },
+    { id: 1, name: "Java", icon: javaIcon,},
+    { id: 2, name: "React", icon: reactIcon,},
+    { id: 3, name: "JavaScript", icon: jsIcon,},
+    { id: 4, name: "Scss", icon: scssIcon,},
+    { id: 5, name: "Webflow", icon: webflowIcon,},
+    { id: 6, name: "Figma", icon: figmaIcon,},
+    { id: 7, name: "PostMan", icon: postmanIcon,},
+    { id: 8, name: "Git", icon: gitIcon,},
+
   ];
 
   return (
