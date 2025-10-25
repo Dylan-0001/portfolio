@@ -1,4 +1,5 @@
 
+import { socialLinks } from './data/Data';
 import gitIcon from '/src/assets/icons/git-icon.png';
 
 export const Footer = () => {
@@ -8,13 +9,6 @@ export const Footer = () => {
         { text: 'Project', },
         { text: 'About',   },
         { text: 'Contact', }
-    ];
-
-    const socialLinks = [
-        { text: 'LinkedIn',  },
-        { text: 'Facebook',  },
-        { text: 'Instagram', },
-        { text: 'GitHub',    }
     ];
 
     return (
@@ -36,7 +30,7 @@ export const Footer = () => {
                     </div>
                     <div className="links">
                         {socialLinks.map((link, index) => (
-                            <p key={"sociallink-" + index}>{link.text}</p>
+                            <p key={"sociallink-" + index}>{link.title}</p>
                         ))}
                     </div>
                 </div>

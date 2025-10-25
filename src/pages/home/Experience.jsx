@@ -1,41 +1,7 @@
+import { experiences } from "../../components/data/Data";
 import { ExperienceCard } from "../../components/ExperienceCard";
 
 export const Experience = () => {
-
-    const experiences = [
-    {
-      id: 1,
-      company: "Devia Studios",
-      role: "Java Developer",
-      period: "2021-2023",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod, nisl eget consectetur consectetur, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet lorem. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, quis aliquam.",
-    },
-    {
-      id: 2,
-      company: "Devia Studios",
-      role: "Java Developer",
-      period: "2021-2023",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod, nisl eget consectetur consectetur, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet lorem. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, quis aliquam.",
-    },
-    {
-      id: 3,
-      company: "Devia Studios",
-      role: "Java Developer",
-      period: "2021-2023",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod, nisl eget consectetur consectetur, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet lorem. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, quis aliquam.",
-    },
-    {
-      id: 4,
-      company: "Devia Studios",
-      role: "Java Developer",
-      period: "2021-2023",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod, nisl eget consectetur consectetur, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet lorem. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, quis aliquam.",
-    },
-  ];
 
   return (
     <section className="experience">

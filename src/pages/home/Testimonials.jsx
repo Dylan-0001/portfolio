@@ -1,33 +1,11 @@
 import { ChevronLeft, ChevronRight} from 'lucide-react';
 import { useState } from 'react';
 import { TestimonialCard } from '../../components/TestimonialCard';
+import { testimonials } from '../../components/data/Data';
 
 export const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const testimonials = [
-    {
-      id: 1,
-      name: "Hamadi",
-      role: "CEO of Devia",
-      rating: 5,
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet lorem. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, quis aliquam.",
-    },
-    {
-      id: 2,
-      name: "Haizen",
-      role: "CEO of Octopia",
-      rating: 5,
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet lorem. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, quis aliquam.",
-    },
-    {
-      id: 3,
-      name: "NKRI",
-      role: "CEO of Jarvis",
-      rating: 5,
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet lorem. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, quis aliquam.",
-    },
-  ];
 
   const nextTestimonial = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);

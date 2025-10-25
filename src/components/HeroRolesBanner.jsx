@@ -1,13 +1,10 @@
 import { Triangle } from "lucide-react";
+import { rolesBanner } from "./data/Data";
 
 
 export const HeroRolesBanner = ({title,addClass}) => {
 
-    const roles = [
-        { role: "Backend Developer"},
-        { role: "Software Engineer"},
-        { role: "Frontend Developer"},
-    ]
+    const roles = rolesBanner;
 
     return(
         <div className="hero-roles">
@@ -20,7 +17,7 @@ export const HeroRolesBanner = ({title,addClass}) => {
                     </span>
                 </>
             ))}
-            
+
         </div>
     );
 

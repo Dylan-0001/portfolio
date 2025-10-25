@@ -1,18 +1,10 @@
 import { SearchIcon } from "lucide-react";
+import { socialLinks } from "./data/Data";
 
-import linkedinIcon from "/src/assets/icons/linkedin-icon.png"
-import facebookIcon from "/src/assets/icons/facebook-icon.png"
-import instagramIcon from "/src/assets/icons/instagram-icon.png"
-import githubIcon from "/src/assets/icons/git-icon.png"
 
 export const FakeSearchBar = () => {
 
-    const list = [
-        { icon: linkedinIcon, title: "Linkedin",   },
-        { icon: facebookIcon, title: "Facebook",   },
-        { icon: instagramIcon, title: "Instagram", },
-        { icon: githubIcon, title: "Github",       },
-    ];
+    const list = socialLinks;
 
     return(
         <div className="fake-nav-bar">
