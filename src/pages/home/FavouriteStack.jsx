@@ -9,6 +9,7 @@ import jsIcon from "/src/assets/icons/js-icon.png";
 import postmanIcon from "/src/assets/icons/postman-icon.png";
 import reactIcon from "/src/assets/icons/React-icon.png";
 import scssIcon from "/src/assets/icons/scss-icon.png";
+import { StackCard } from "../../components/StackCard";
 
 export const FavouriteStack = () => {
 
@@ -33,11 +34,7 @@ export const FavouriteStack = () => {
 
         <div className="favourite-stack__grid">
           {technologies.map((tech) => (
-            <div key={tech.id} className="favourite-stack__card">
-              <div className="favourite-stack__icon">
-                <img src={tech.icon} alt={tech.name}/>
-              </div>
-            </div>
+            <StackCard item={tech}/>
           ))}
         </div>
       </div>

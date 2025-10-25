@@ -18,28 +18,30 @@ const projects = [
 
  return (
     <section className="projects">
-    <img className="project-line" src={projectLine} alt="project line" />
+      
+      <img className="project-line" src={projectLine} alt="project line" />
 
-    <div className="projects__container">
-      <div className="left">
-        <div className="block">
-          <img src={projects[0].image} alt={projects[0].title} className="image"/>
-          <div className="block-right">
-            <img src={projects[1].image} alt={projects[1].title} className="image"/>
-            <div className="project-card">
-              <h2 className="projects__title">PROJECTS</h2>
+      <div className="projects__container">
+        <div className="left">
+          <div className="block">
+            <img src={projects[0].image} alt={projects[0].title} className="image"/>
+            <div className="block-right">
+              <img src={projects[1].image} alt={projects[1].title} className="image"/>
+              <div className="project-card">
+                <h2 className="projects__title">PROJECTS</h2>
+              </div>
             </div>
           </div>
+          <img src={projects[3].image} alt={projects[3].title} className="image"/>
         </div>
-        <img src={projects[3].image} alt={projects[3].title} className="image"/>
+        <div className="right">
+          <img src={projects[2].image} alt={projects[2].title} className="image"/>
+          <img src={projects[4].image} alt={projects[4].title} className="image"/>
+        </div>
       </div>
-      <div className="right">
-        <img src={projects[2].image} alt={projects[2].title} className="image"/>
-        <img src={projects[4].image} alt={projects[4].title} className="image"/>
-
-      </div>
-    </div>
+      
       <button className="projects__button">See All Projects</button>
+    
     </section>
   );
 }

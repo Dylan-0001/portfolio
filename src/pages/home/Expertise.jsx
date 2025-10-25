@@ -1,4 +1,5 @@
 
+import { ExpertiseCard } from "../../components/ExpertiseCard";
 import expertiseLine from "/src/assets/lines/expertise-line.png";
 
 export const Expertise = () => {
@@ -49,12 +50,7 @@ export const Expertise = () => {
 
         <div className="expertise__grid">
           {expertiseItems.map((item) => (
-            <div key={item.id} className="expertise__card">
-              <div className="expertise__card-header">
-                <h3 className="expertise__card-title">{item.title}</h3>
-              </div>
-              <p className="expertise__description">{item.description}</p>
-            </div>
+            <ExpertiseCard item={item}/>
           ))}
         </div>
       </div>

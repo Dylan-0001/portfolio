@@ -1,5 +1,8 @@
+import { ExperienceCard } from "../../components/ExperienceCard";
+
 export const Experience = () => {
-  const experiences = [
+
+    const experiences = [
     {
       id: 1,
       company: "Devia Studios",
@@ -44,14 +47,7 @@ export const Experience = () => {
 
         <div className="experience__grid">
           {experiences.map((exp) => (
-            <div key={exp.id} className="experience__card">
-              <div className="experience__card-header">
-                <h3 className="experience__company">{exp.company}</h3>
-                <span className="experience__period">{exp.period}</span>
-              </div>
-              <h4 className="experience__role">{exp.role}</h4>
-              <p className="experience__description">{exp.description}</p>
-            </div>
+            <ExperienceCard list={exp}/>
           ))}
         </div>
       </div>
