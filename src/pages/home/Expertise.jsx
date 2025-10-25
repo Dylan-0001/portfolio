@@ -1,47 +1,41 @@
 
 import expertiseLine from "/src/assets/lines/expertise-line.png";
 
-const Expertise = () => {
+export const Expertise = () => {
   const expertiseItems = [
     {
       id: 1,
-      title: "User Interface",
-      percentage: 75,
+      title: "Java",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod, nisl eget consectetur.",
     },
     {
       id: 2,
-      title: "App Design",
-      percentage: 90,
+      title: "Next.Js",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod, nisl eget consectetur.",
     },
     {
       id: 3,
-      title: "Branding",
-      percentage: 65,
+      title: "React",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod, nisl eget consectetur.",
     },
     {
       id: 4,
-      title: "Figma",
-      percentage: 85,
+      title: "Css / Scss",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod, nisl eget consectetur.",
     },
     {
       id: 5,
-      title: "HTML",
-      percentage: 95,
+      title: "Webflow",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod, nisl eget consectetur.",
     },
     {
       id: 6,
-      title: "CSS",
-      percentage: 90,
+      title: "Gestion de Projet",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod, nisl eget consectetur.",
     },
@@ -58,7 +52,6 @@ const Expertise = () => {
             <div key={item.id} className="expertise__card">
               <div className="expertise__card-header">
                 <h3 className="expertise__card-title">{item.title}</h3>
-                <span className="expertise__percentage">{item.percentage}%</span>
               </div>
               <p className="expertise__description">{item.description}</p>
             </div>
@@ -68,5 +61,3 @@ const Expertise = () => {
     </section>
   );
 };
-
-export default Expertise;

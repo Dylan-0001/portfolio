@@ -35,21 +35,13 @@
   }
 
   &__card {
-    background: white;
+    background: #F8F8F8;
     padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+    box-shadow: 0 4px 20px rgba(0, 4, 4, 0.25);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-left: 4px solid #FF6060;
+    border-left: 4px solid #000000;
 
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-    }
-
-    &:nth-child(even) {
-      border-left-color: #8A2BE2;
-    }
   }
 
   &__card-header {
@@ -64,12 +56,8 @@
     font-weight: bold;
     color: #333;
     margin: 0;
-  }
-
-  &__percentage {
-    font-size: 20px;
-    font-weight: bold;
-    color: #FF6060;
+    font-style: italic;
+    text-decoration: underline;
   }
 
   &__description {

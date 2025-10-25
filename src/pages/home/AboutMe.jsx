@@ -1,7 +1,7 @@
 import avatarImage from '../../assets/images/bit-mojie.png';
 import aboutLine from "/src/assets/lines/about-line.png";
 
-const AboutMe = () => {
+export const AboutMe = () => {
   return (
     <section className="about-me">
       <img className="about-line" src={aboutLine} alt="about line" />
@@ -32,5 +32,3 @@ const AboutMe = () => {
     </section>
   );
 };
-
-export default AboutMe;

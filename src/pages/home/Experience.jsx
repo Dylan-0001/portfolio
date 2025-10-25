@@ -1,4 +1,4 @@
-const Experience = () => {
+export const Experience = () => {
   const experiences = [
     {
       id: 1,
@@ -58,5 +58,3 @@ const Experience = () => {
     </section>
   );
 };
-
-export default Experience;

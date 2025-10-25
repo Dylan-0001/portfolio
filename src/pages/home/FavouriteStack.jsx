@@ -10,7 +10,7 @@ import postmanIcon from "/src/assets/icons/postman-icon.png";
 import reactIcon from "/src/assets/icons/React-icon.png";
 import scssIcon from "/src/assets/icons/scss-icon.png";
 
-const FavouriteStack = () => {
+export const FavouriteStack = () => {
 
 
   const technologies = [
@@ -44,5 +44,3 @@ const FavouriteStack = () => {
     </section>
   );
 };
-
-export default FavouriteStack;

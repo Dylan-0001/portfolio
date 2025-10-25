@@ -69,17 +69,17 @@
   }
 
   &__card {
+    box-shadow: 0 5px 20px rgba(0, 4, 4, 0.25);
     position: absolute;
     width: 100%;
-    background: white;
+    background: #F8F8F8;
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     opacity: 0;
     transform: translateX(100%);
     transition: all 0.5s ease;
     pointer-events: none;
-
+    
     &--active {
       opacity: 1;
       transform: translateX(0);
@@ -90,9 +90,11 @@
 
   &__card-header {
     display: flex;
-    align-items: center;
+    
     gap: 20px;
     margin-bottom: 20px;
+    justify-content: space-between;
+    
   }
 
   &__avatar {
@@ -128,6 +130,8 @@
     display: flex;
     gap: 5px;
     margin-bottom: 20px;
+    color: black;
+
   }
 
   &__star {

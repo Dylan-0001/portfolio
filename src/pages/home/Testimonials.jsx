@@ -1,33 +1,31 @@
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, StarIcon, StarsIcon } from 'lucide-react';
 import { useState } from 'react';
+import avatarImage from '../../assets/images/bit-mojie.png';
 
-const Testimonials = () => {
+export const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const testimonials = [
     {
       id: 1,
-      name: "Maxwell",
-      role: "CEO of Denva",
+      name: "Hamadi",
+      role: "CEO of Devia",
       rating: 5,
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet lorem. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, quis aliquam.",
-      avatar: "👤",
     },
     {
       id: 2,
-      name: "Maxwell",
-      role: "CEO of Denva",
+      name: "Haizen",
+      role: "CEO of Octopia",
       rating: 5,
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet lorem. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, quis aliquam.",
-      avatar: "👤",
     },
     {
       id: 3,
-      name: "Maxwell",
-      role: "CEO of Denva",
+      name: "NKRI",
+      role: "CEO of Jarvis",
       rating: 5,
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet lorem. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, quis aliquam.",
-      avatar: "👤",
     },
   ];
 
@@ -71,18 +69,26 @@ const Testimonials = () => {
               }`}
             >
               <div className="testimonials__card-header">
-                <div className="testimonials__avatar">{testimonial.avatar}</div>
-                <div className="testimonials__info">
-                  <h3 className="testimonials__name">{testimonial.name}</h3>
-                  <p className="testimonials__role">{testimonial.role}</p>
+                <div className="infos">
+                  <div className="testimonials__avatar">
+                    <img
+                      src={avatarImage}
+                      alt="Dylan Avatar"
+                      className="about-me__avatar"
+                    />
+                  </div>
+                  <div className="testimonials__info">
+                    <h3 className="testimonials__name">{testimonial.name}</h3>
+                    <p className="testimonials__role">{testimonial.role}</p>
+                  </div>
                 </div>
-              </div>
-              <div className="testimonials__rating">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <span key={i} className="testimonials__star">
-                    ⭐
-                  </span>
-                ))}
+                <div className="testimonials__rating">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <span key={i} className="testimonials__star">
+                      <StarIcon/>
+                    </span>
+                  ))}
+                </div>
               </div>
               <p className="testimonials__text">{testimonial.text}</p>
             </div>
@@ -92,5 +98,3 @@ const Testimonials = () => {
     </section>
   );
 };
-
-export default Testimonials;
