@@ -1,3 +1,5 @@
+@use "./../mixins";
+
 footer
 {
   background: linear-gradient(90deg, #E32692A0 0%, #914DC5A0 25%, #7985E0A0 53%, #71ABEDA0 73%, #68BFF1A0 100%);
@@ -18,12 +20,25 @@ footer
     font-size: 16px;
     font-weight: bolder;
 
+    @include mixins.responsive("tablet") 
+    {    
+      justify-content: center;
+    }
+    @include mixins.responsive("mobile") 
+    {    
+      display: block;
+    }
+
     .informations
     {
       h2
       {
         font-weight: bolder;
         margin-bottom: 30px;
+        @include mixins.responsive("tablet") 
+        {    
+          margin-bottom: 20px;
+        }
       }
 
       p
@@ -31,11 +46,21 @@ footer
         font-size: 18px;
         width: 80%;
         margin-bottom: 50px;
+        @include mixins.responsive("tablet") 
+        {    
+          margin-bottom: 20px;
+        }
+        @include mixins.responsive("mobile") 
+        {    
+          margin-left: 10%;
+          margin-right: 10%;
+        }
       }
 
       .github-button 
       {
-        width: 50%;
+        width: 100%;
+        max-width: 200px;
         height: 55px;
         background-color: black;
         border-radius: 100px;
@@ -58,14 +83,28 @@ footer
           font-weight: 500;
           font-size: 16px;
         }
+        @include mixins.responsive("mobile") 
+        {    
+          gap: 0;
+          width: 60%;
+          margin-left: 20%;
+          margin-right: 20%;
+        }
+      }
+
+      @include mixins.responsive("mobile") 
+      {    
+        margin-top: 3%;
+        text-align: center;
+        margin-bottom: 30px;
       }
     }
 
     .socials
     {
       display: flex;
-      gap: 80%;
-      margin: 0 9%;
+      gap: 50%;
+      margin: 0 10%;
 
       .links p
       {

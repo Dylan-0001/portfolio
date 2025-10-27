@@ -3,11 +3,18 @@
 //RESPONSIVE MIXIN (MOBILE)
 @mixin responsive($breakpoint)
 {
-  @if $breakpoint == "mobile"
-  {
-    @media (max-width: variables.$breakpoint-mobile)
+  @if $breakpoint == "tablet" 
     {
-      @content;
+        @media (max-width: variables.$breakpoint-tablet) 
+        {
+            @content;
+        }
     }
-  }
+    @else if $breakpoint == "mobile"
+    {
+        @media (max-width: variables.$breakpoint-mobile)
+        {
+            @content;
+        }   
+    }
 }
