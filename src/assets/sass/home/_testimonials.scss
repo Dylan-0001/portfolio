@@ -1,4 +1,5 @@
 @use "./../variables";
+@use "./../mixins";
 
 .testimonials 
 {
@@ -11,6 +12,11 @@
     margin: 0 10%;
     display: flex;
     align-items: center;
+    @include mixins.responsive("tablet") 
+    {    
+      display: block;
+      margin: 0 5%;
+    }
   }
 
   &__header 
@@ -19,6 +25,20 @@
     align-items: center;
     margin-bottom: 50px;
     margin-right: 5%;
+    @include mixins.responsive("tablet") 
+    {    
+      margin-right: 0;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+    @include mixins.responsive("mobile") 
+    {    
+      margin-right: 0;
+      margin-bottom: 20px;
+      display: block;
+      text-align: center;
+    }
   }
 
   &__title 
@@ -27,12 +47,26 @@
     font-weight: variables.$title-font-weight;
     color: variables.$title-color;
     margin-bottom: 10%;
+    @include mixins.responsive("tablet") 
+    {    
+      margin: 0;
+    }
+    @include mixins.responsive("mobile") 
+    {    
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
   }
 
   &__controls 
   {
     display: flex;
     gap: 15px;
+    @include mixins.responsive("mobile") 
+    {    
+      justify-content: center;
+      gap: 30px;
+    }
   }
 
   &__btn 
