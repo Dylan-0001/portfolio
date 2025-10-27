@@ -1,4 +1,5 @@
 @use "./../variables";
+@use "./../mixins";
 
 .experience 
 {
@@ -12,6 +13,17 @@
     align-items: center;
     margin: 0 10%;
     margin-bottom: 50px;
+    @include mixins.responsive("tablet") 
+    {    
+      margin: 0 5%;
+      margin-bottom: 30px;
+    }
+    @include mixins.responsive("mobile") 
+    {    
+      display: block;
+      justify-content: center;
+      text-align: center;
+    }
   }
 
   &__title 
@@ -19,6 +31,10 @@
     font-size: variables.$title-font-size;
     font-weight: variables.$title-font-weight;
     color: variables.$title-color;
+    @include mixins.responsive("mobile") 
+    {    
+      font-size: 30px;
+    }
   }
 
   &__btn 
@@ -31,7 +47,12 @@
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;  
+    transition: all 0.3s ease; 
+    @include mixins.responsive("mobile") 
+    {    
+      font-size: 14px;
+      margin-top: 10px;
+    }
   }
 
   &__grid 
@@ -40,6 +61,15 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     margin: 0 10%;
+    @include mixins.responsive("tablet") 
+    {    
+      margin: 0 5%;
+    }
+    @include mixins.responsive("mobile") 
+    {    
+      grid-template-columns: repeat(1, 1fr);
+      gap: 10px
+    }
   }
 
   &__card 
