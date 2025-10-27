@@ -86,6 +86,10 @@
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 15px;
+    @include mixins.responsive("tablet") 
+    {    
+      display: block;
+    }
   }
 
   &__company 
@@ -102,6 +106,10 @@
     color: black;
     padding: 5px 15px;
     border-radius: 15px;
+    @include mixins.responsive("tablet") 
+    {    
+      padding: 0;
+    }
   }
 
   &__role 

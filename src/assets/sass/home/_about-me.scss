@@ -1,4 +1,5 @@
 @use "./../variables";
+@use "./../mixins";
 
 .about-me 
 {
@@ -12,6 +13,10 @@
     left: 0;
     z-index: -1;
     margin-top: 9%;
+    @include mixins.responsive("tablet") 
+    {    
+      display: none;
+    }
   }
 
   &__title 
@@ -22,6 +27,16 @@
     text-align: left;
     margin-bottom: 50px;
     margin: 0 10%;
+    @include mixins.responsive("tablet") 
+    {    
+      margin: 0 5%;
+    }
+    @include mixins.responsive("mobile") 
+    {    
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
   }
 
   &__content 
@@ -31,6 +46,10 @@
     gap: 40px;
     align-items: left;
     margin: 0 10%;
+    @include mixins.responsive("tablet") 
+    {    
+      margin: 0 5%;
+    }
   }
 
   &__text 
@@ -41,6 +60,11 @@
     text-align: left;
     max-width: 100%;
     font-weight: 700;
+    @include mixins.responsive("mobile") 
+    {    
+      text-align: center;
+      font-size: 20px;
+    }
   }
 
   &__profile 
@@ -53,6 +77,16 @@
     padding: 20px 20px;
     border-radius: 50px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    @include mixins.responsive("tablet") 
+    {    
+      width: 40vw;
+      justify-content: center;
+    }
+    @include mixins.responsive("mobile") 
+    {    
+      width: 100%;
+      justify-content: center;
+    }
   }
 
   &__avatar 
