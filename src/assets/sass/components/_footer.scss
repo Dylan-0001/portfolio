@@ -1,4 +1,5 @@
-footer{
+footer
+{
   background: linear-gradient(90deg, #E32692A0 0%, #914DC5A0 25%, #7985E0A0 53%, #71ABEDA0 73%, #68BFF1A0 100%);
   z-index: -10;
   display: flex;
@@ -6,9 +7,9 @@ footer{
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   
-  .container{
+  .container
+  {
     align-items: center;
-
     display: flex;
     width: 100%;
     padding: 3% 4%;
@@ -17,34 +18,41 @@ footer{
     font-size: 16px;
     font-weight: bolder;
 
-    .informations{
-      h2{
+    .informations
+    {
+      h2
+      {
         font-weight: bolder;
         margin-bottom: 30px;
       }
-      p{
+
+      p
+      {
         font-size: 18px;
         width: 80%;
         margin-bottom: 50px;
       }
-      .github-button {
+
+      .github-button 
+      {
         width: 50%;
         height: 55px;
         background-color: black;
         border-radius: 100px;
-
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 20px;
         cursor: pointer;
 
-        img{
+        img
+        {
           width: 30px;
           margin-left: 10px;
         }
 
-        .github-name {
+        .github-name 
+        {
           margin: 0;
           color: white;
           font-weight: 500;
@@ -53,12 +61,14 @@ footer{
       }
     }
 
-    .socials{
+    .socials
+    {
       display: flex;
       gap: 80%;
       margin: 0 9%;
 
-      .links p{
+      .links p
+      {
         margin-bottom: 30px;
       }
     }

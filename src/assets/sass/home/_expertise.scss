@@ -1,8 +1,12 @@
-.expertise {
+@use "./../variables";
+
+.expertise 
+{
   width: 100%;
   padding: 80px 5%;
 
-  .expertise-line{
+  .expertise-line
+  {
     width: 100%;
     position: absolute;
     left: 0;
@@ -11,47 +15,44 @@
     
   }
 
-  &__container {
-    margin: 0 auto;
-  }
-
-  &__title {
-    font-size: 48px;
-    font-weight: 800;
-    color: #000000;
-
+  &__title 
+  {
+    font-size: variables.$title-font-size;
+    font-weight: variables.$title-font-weight;
+    color: variables.$title-color;
     text-align: left;
+    margin: 0 10%;
     margin-bottom: 50px;
   }
 
-  &__grid {
+  &__grid 
+  {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-    }
+    margin: 0 10%;
   }
 
-  &__card {
+  &__card 
+  {
     background: #F8F8F8;
     padding: 30px;
     border-radius: 5px;
     box-shadow: 0 4px 20px rgba(0, 4, 4, 0.25);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-left: 4px solid #000000;
-
   }
 
-  &__card-header {
+  &__card-header 
+  {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
   }
 
-  &__card-title {
+  &__card-title 
+  {
     font-size: 22px;
     font-weight: bold;
     color: #333;
@@ -60,18 +61,12 @@
     text-decoration: underline;
   }
 
-  &__description {
+  &__description
+  {
     font-size: 14px;
     line-height: 1.8;
     color: #666;
     margin: 0;
   }
 
-  @media (max-width: 768px) {
-    padding: 60px 5%;
-
-    &__title {
-      font-size: 36px;
-    }
-  }
 }

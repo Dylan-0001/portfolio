@@ -1,5 +1,7 @@
-.projects {
-  padding-top: 5%;
+@use "./../variables";
+
+.projects 
+{
   width: 100%;
   text-align: center;
   display: flex;
@@ -7,57 +9,66 @@
   align-items: center;
   margin-bottom: 5%;
  
-  .project-line {
+  .project-line 
+  {
     width: 100%;
     position: absolute;
     left: 0;
     z-index: -1;
   }
  
-  &__container {
+  &__container 
+  {
     align-items: center;
     justify-content: center;
     display: flex;
     width: fit-content;
     
-    .left {
+    .left
+    {
       width: fit-content;
      
-      .block {
+      .block 
+      {
         display: flex;
-        align-items: stretch; // Les éléments du block ont la même hauteur
+        align-items: stretch;
        
-        .block-right {
+        .block-right 
+        {
           display: flex;
           flex-direction: column;
           
-          .project-card {
+          .project-card 
+          {
             display: flex;
             align-items: center;
             justify-content: center;
-            flex: 1; // Prend l'espace restant
+            flex: 1;
           }
         }
       }
     }
    
-    .right {
+    .right 
+    {
       display: flex;
       flex-direction: column;
       width: fit-content;
     }
   }
  
-  .image {
+  .image 
+  {
     display: block;
     max-width: 100%;
     height: auto;
   }
  
-  .projects__title {
-    font-size: clamp(32px, 5vw, 48px);
-    font-weight: 800;
-    color: #000000;
+  .projects__title 
+  {
+    font-size: variables.$title-font-size;
+    font-weight: variables.$title-font-weight;
+    color: variables.$title-color;
     background-color: #F8F8F8;
     padding: clamp(30px, 5vw, 60px);
     border-radius: 10px;
@@ -68,7 +79,8 @@
     padding-right: 13%;
   }
  
-  &__button {
+  &__button 
+  {
     margin-top: 3rem;
     background: #000;
     color: #fff;

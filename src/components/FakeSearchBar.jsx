@@ -4,8 +4,6 @@ import { socialLinks } from "./data/Data";
 
 export const FakeSearchBar = () => {
 
-    const list = socialLinks;
-
     return(
         <div className="fake-nav-bar">
             <div className="fake-search-bar">
@@ -13,7 +11,7 @@ export const FakeSearchBar = () => {
                 <p>Backend Developer</p>
             </div>
 
-            {list.map((r, i) => (
+            {socialLinks.map((r, i) => (
                 <div key={i} className="rs-item">
                     <img src={r.icon} alt={r.title} className={r.title.toLowerCase() === "github" ? "github" : ""}/>
                     <p>{r.title}</p>

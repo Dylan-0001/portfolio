@@ -1,15 +1,17 @@
-header{
+header
+{
   margin: 0 10%;
   margin-top: 25px;
 
-  nav{
+  nav
+  {
     display: flex;
     justify-content: space-between;
-
     font-size: 16px;
     font-weight: bolder;
 
-    ul{
+    ul
+    {
       display: flex;
       gap: 20px;
     }

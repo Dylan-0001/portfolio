@@ -1,31 +1,28 @@
-.experience {
+@use "./../variables";
+
+.experience 
+{
   width: 100%;
   padding: 100px 5%;
 
-  &__container {
-    margin: 0 auto;
-  }
-
-  &__header {
+  &__header 
+  {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 10%;
     margin-bottom: 50px;
-
-    @media (max-width: 768px) {
-      flex-direction: column;
-      gap: 20px;
-    }
   }
 
-  &__title {
-    font-size: 48px;
-    font-weight: 800;
-    color: #000000;
-    margin: 0;
+  &__title 
+  {
+    font-size: variables.$title-font-size;
+    font-weight: variables.$title-font-weight;
+    color: variables.$title-color;
   }
 
-  &__btn {
+  &__btn 
+  {
     background: #000000;
     color: white;
     padding: 12px 30px;
@@ -34,68 +31,63 @@
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
-
-  
+    transition: all 0.3s ease;  
   }
 
-  &__grid {
+  &__grid 
+  {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-    }
+    margin: 0 10%;
   }
 
-  &__card {    
+  &__card 
+  {    
     margin-right: 40px;
     margin-bottom: 40px;
     border-left: #1a1a1ae3 5px solid;
     padding-left: 15px;
   }
 
-  &__card-header {
+  &__card-header 
+  {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 15px;
   }
 
-  &__company {
+  &__company 
+  {
     font-size: 28px;
     font-weight: 900;
     color: black;
     margin: 0;
   }
 
-  &__period {
+  &__period 
+  {
     font-size: 18px;
     color: black;
     padding: 5px 15px;
     border-radius: 15px;
   }
 
-  &__role {
+  &__role 
+  {
     font-size: 22px;
     font-weight: 600;
     color: black;
     margin: 0 0 15px 0;
   }
 
-  &__description {
+  &__description 
+  {
     font-size: 18px;
     line-height: 1.8;
     color: black;
     margin: 0;
   }
 
-  @media (max-width: 768px) {
-    padding: 60px 5%;
-
-    &__title {
-      font-size: 36px;
-    }
-  }
 }

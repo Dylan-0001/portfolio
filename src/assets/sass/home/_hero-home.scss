@@ -1,7 +1,10 @@
-.home-hero{
+@use "./../variables";
+
+.home-hero
+{
   width: 100%;
   margin-top: 5%;
-  margin-bottom: 20%;
+  margin-bottom: 7%;
 
   .hero-line
   {
@@ -15,8 +18,8 @@
   {
     text-align: center;
     font-size: 52px;
-    font-weight: 800;
-    color: #000000;
+    font-weight: variables.$title-font-weight;
+    color: variables.$title-color;
   }
 
   .hero-container 
@@ -25,7 +28,6 @@
     align-items: center;
     margin-top: 5%;
     display: flex;
-    
 
     .fake-nav-bar
     {
@@ -78,7 +80,6 @@
           }
         }
       }
-
     }
 
     .bit-mojie
@@ -86,7 +87,6 @@
       justify-content: center;
       align-items: center;
       position: relative;
-
 
       img
       {
@@ -174,12 +174,10 @@
     align-items: center;
     width: 100%;
     gap: 30px;
-    margin-top: 15%;
+    margin-top: 10%;
     font-size: 50px;
     font-weight: 600;
-    position: absolute;
     left: 0;
-    margin-top: 10%;
 
     &__item 
     {
@@ -192,23 +190,5 @@
       font-size: 20px;
       transform: rotate(110deg);
     }
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
   }
 }
