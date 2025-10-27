@@ -12,6 +12,7 @@
     margin: 0 10%;
     display: flex;
     align-items: center;
+
     @include mixins.responsive("tablet") 
     {    
       display: block;
