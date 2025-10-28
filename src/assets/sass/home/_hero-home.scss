@@ -1,4 +1,5 @@
 @use "./../variables";
+@use "./../mixins";
 
 .home-hero
 {
@@ -12,6 +13,7 @@
     position: absolute;
     left: 0;
     z-index: -1;
+    top: 20%
   }
 
   h1
@@ -20,6 +22,11 @@
     font-size: 52px;
     font-weight: variables.$title-font-weight;
     color: variables.$title-color;
+    @include mixins.responsive("mobile") 
+    {    
+      font-size: 30px;
+      margin-top: 5%;
+    }
   }
 
   .hero-container 
@@ -28,7 +35,13 @@
     align-items: center;
     margin-top: 5%;
     display: flex;
-
+    
+    @include mixins.responsive("mobile") 
+    {    
+      display: flex;
+      flex-direction: column-reverse;
+    }     
+    
     .fake-nav-bar
     {
       position: absolute;
@@ -38,6 +51,18 @@
       box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
       width: 30%;
       max-width: 300px;
+
+      @include mixins.responsive("tablet") 
+      {    
+        left: 5%;
+        width: 25%;
+      }
+      @include mixins.responsive("mobile") 
+      {    
+        position: relative;
+        width: 90%;
+        left: 0;
+      }     
 
       .fake-search-bar
       {
@@ -49,13 +74,16 @@
         padding: 10px;
         margin-bottom: 30px;
         align-items: center;
-
         p
         {
           color: black;
           font-weight: bold;
           margin-left: 10px;
           font-size: 18px;
+          @include mixins.responsive("tablet") 
+          {    
+            font-size: 14px;
+          }
         }
       }
 
@@ -65,6 +93,10 @@
         margin-left: 15px;
         margin-bottom: 35px;
         gap: 15px;
+        @include mixins.responsive("mobile") 
+        {    
+          margin-bottom: 25px;
+        }
         p
         {
           font-size: 17px;
@@ -93,6 +125,18 @@
         width: 70%;
         margin-left: 15%;
         margin-right: 15%;
+        @include mixins.responsive("tablet") 
+        {    
+          width: 60%;
+          margin-left: 20%;
+          margin-right: 20%;
+        }
+        @include mixins.responsive("tablet") 
+        {    
+          width: 50%;
+          margin-left: 25%;
+          margin-right: 25%;
+        }
       }
 
       .hero-badge 
@@ -106,7 +150,10 @@
         font-weight: 600;
         white-space: nowrap;
         animation: float 3s ease-in-out infinite;
-
+        @include mixins.responsive("mobile") 
+        {    
+          font-size: 13px;
+        }
         &--backend 
         {
           top: 110%;
@@ -115,6 +162,15 @@
           display: flex;
           gap: 10px;
           align-items: center;
+          @include mixins.responsive("tablet") 
+          {    
+            left: 30%;
+            top: 100%
+          }
+          @include mixins.responsive("mobile") 
+          {    
+            display: none;
+          }
         }
 
         &--web 
@@ -125,6 +181,10 @@
           display: flex;
           gap: 10px;
           align-items: center;
+          @include mixins.responsive("mobile") 
+          {    
+            display: none;
+          }
         }
 
         &--available 
@@ -143,16 +203,34 @@
           align-items: center;
           gap: 8px;
           animation-delay: 1s;
+          @include mixins.responsive("tablet") 
+          {    
+            bottom: 15%;
+          }
+          @include mixins.responsive("mobile") 
+          {    
+            right: 70%;
+            bottom: 80%;
+          }
         }
 
         &--branding 
         {
-          bottom: 90%;
+          bottom: 100%;
           left: -10%;
           animation-delay: 1.5s;
           display: flex;
           gap: 10px;
           align-items: center;
+          @include mixins.responsive("tablet") 
+          {    
+            left: 70%;
+            bottom: 90%;
+          }
+          @include mixins.responsive("mobile") 
+          {    
+            display: none;
+          }
         }
 
         &__dot
