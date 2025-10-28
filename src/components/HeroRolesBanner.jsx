@@ -12,9 +12,7 @@ export const HeroRolesBanner = ({title,addClass}) => {
             {roles.map((r, i) => (
                 <> 
                     <span className="hero-roles__item">{r.role}</span>
-                    <span className="hero-roles__dot">
-                        
-                    </span>
+                    <span className="hero-roles__dot"></span>
                 </>
             ))}
 
