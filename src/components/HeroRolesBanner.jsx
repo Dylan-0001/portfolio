@@ -13,7 +13,7 @@ export const HeroRolesBanner = ({title,addClass}) => {
                 <> 
                     <span className="hero-roles__item">{r.role}</span>
                     <span className="hero-roles__dot">
-                        <Triangle size={40}/>
+                        
                     </span>
                 </>
             ))}

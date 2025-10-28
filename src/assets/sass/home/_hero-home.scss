@@ -3,7 +3,7 @@
 .home-hero
 {
   width: 100%;
-  margin-top: 5%;
+  margin-top: 4%;
   margin-bottom: 7%;
 
   .hero-line
@@ -173,11 +173,11 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    gap: 30px;
     margin-top: 10%;
-    font-size: 50px;
+    font-size: 3vw;
     font-weight: 600;
-    left: 0;
+    
+    gap: 2vw;
 
     &__item 
     {
@@ -186,9 +186,17 @@
 
     &__dot 
     {
-      color: #FF6060;
-      font-size: 20px;
-      transform: rotate(110deg);
+      transform: rotate(45deg);
+      width: 25px;
+      height: 25px;
+      border-radius: 3px;
+      background: linear-gradient(
+        45deg,
+        #fe5249 0%,
+        #f45668 31%,
+        #f2759c 65%,
+        #e72791 100%
+      );
     }
   }
 }
