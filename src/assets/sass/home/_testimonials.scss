@@ -6,6 +6,11 @@
   width: 100%;
   padding: 80px 5%;
   margin-top: 5%;
+  @include mixins.responsive("mobile") 
+  {    
+    margin-bottom: -10%;
+    margin-top: 0;
+  }
 
   &__container 
   {

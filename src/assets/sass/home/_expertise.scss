@@ -5,7 +5,11 @@
 {
   width: 100%;
   padding: 80px 5%;
-
+  @include mixins.responsive("tablet") 
+  {    
+    padding: 0 5%;
+  }
+  
   .expertise-line
   {
     width: 100%;

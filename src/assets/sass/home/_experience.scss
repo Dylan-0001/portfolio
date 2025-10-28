@@ -5,7 +5,11 @@
 {
   width: 100%;
   padding: 100px 5%;
-
+  @include mixins.responsive("tablet") 
+  {    
+    padding: 5% 5%;
+  }
+  
   &__header 
   {
     display: flex;

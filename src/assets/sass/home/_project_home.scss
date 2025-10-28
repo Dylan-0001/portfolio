@@ -9,7 +9,11 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 5%;
- 
+  @include mixins.responsive("tablet") 
+  {    
+    margin-top: 10%;
+  }
+  
   .project-line 
   {
     width: 100%;
