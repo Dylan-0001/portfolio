@@ -1,4 +1,5 @@
 @use "./../variables";
+@use "./../mixins";
 
 .projects 
 {
@@ -15,6 +16,10 @@
     position: absolute;
     left: 0;
     z-index: -1;
+    @include mixins.responsive("tablet") 
+    {    
+      display: none;
+    }
   }
  
   &__container 
@@ -22,21 +27,55 @@
     align-items: center;
     justify-content: center;
     display: flex;
+    margin: 0 10%;
     width: fit-content;
+
+    @include mixins.responsive("tablet") 
+    {    
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+    }
     
     .left
     {
       width: fit-content;
-     
+      @include mixins.responsive("tablet") 
+      {    
+        img{
+          max-width: 700px;
+        }
+      }
+
       .block 
       {
         display: flex;
         align-items: stretch;
-       
+        @include mixins.responsive("tablet") 
+        {    
+          flex-direction: row;
+          align-items: center;
+          gap: 1.0rem;
+          width: 40vw;
+          justify-content: center;
+        }
+
         .block-right 
         {
           display: flex;
           flex-direction: column;
+
+          @include mixins.responsive("tablet") 
+          {    
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            img{
+              width: 50vw;
+            }
+          }
           
           .project-card 
           {
@@ -44,8 +83,51 @@
             align-items: center;
             justify-content: center;
             flex: 1;
+
+            @include mixins.responsive("tablet") 
+            {    
+              order: -1;
+              
+            }
+
+            .projects__title 
+            {
+              font-size: variables.$title-font-size;
+              font-weight: variables.$title-font-weight;
+              color: variables.$title-color;
+              background-color: #F8F8F8;
+              padding: clamp(30px, 5vw, 60px);
+              border-radius: 10px;
+              box-shadow: 0 4px 20px rgba(0, 4, 4, 0.25);
+              margin: 0;
+              text-align: center;
+              padding-left: 13%;
+              padding-right: 13%;
+
+              @include mixins.responsive("tablet") 
+              {    
+                padding: 1rem 1.5rem;
+                width: 100%;
+              }
+
+              @include mixins.responsive("mobile") 
+              {    
+                font-size: 1.5rem;
+                padding: 0.75rem;
+              }
+            }
           }
         }
+      }
+
+      @include mixins.responsive("tablet") 
+      {    
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
       }
     }
    
@@ -54,31 +136,38 @@
       display: flex;
       flex-direction: column;
       width: fit-content;
+      @include mixins.responsive("tablet") 
+      {    
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+        gap: 1.5rem;
+        margin-top: 20px;
+        img{
+          width: 43vw;
+        }
+      }
+    }
+
+    .image 
+    {
+      @include mixins.responsive("tablet") 
+      {    
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        border-radius: 10px;
+      }
+
+      @include mixins.responsive("mobile") 
+      {    
+        max-width: 90%;
+      }
     }
   }
- 
-  .image 
-  {
-    display: block;
-    max-width: 100%;
-    height: auto;
-  }
- 
-  .projects__title 
-  {
-    font-size: variables.$title-font-size;
-    font-weight: variables.$title-font-weight;
-    color: variables.$title-color;
-    background-color: #F8F8F8;
-    padding: clamp(30px, 5vw, 60px);
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 4, 4, 0.25);
-    margin: 0;
-    text-align: center;
-    padding-left: 13%;
-    padding-right: 13%;
-  }
- 
+   
   &__button 
   {
     margin-top: 3rem;
@@ -89,5 +178,19 @@
     border-radius: 50px;
     font-size: 1rem;
     cursor: pointer;
+
+    @include mixins.responsive("tablet") 
+    {    
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 0.9rem;
+      width: 80%;
+      max-width: 250px;
+    }
+
+    @include mixins.responsive("mobile") 
+    {    
+      width: 90%;
+    }
   }
 }
