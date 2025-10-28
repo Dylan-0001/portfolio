@@ -1,17 +1,17 @@
-import linkedinIcon from "./../../assets/icons/linkedin-icon.png"
-import facebookIcon from "./../../assets/icons/facebook-icon.png"
-import instagramIcon from "./../../assets/icons/instagram-icon.png"
-import githubIcon from "./../../assets/icons/git-icon.png"
+import linkedinIcon from "/src/assets/icons/linkedin-icon.png"
+import facebookIcon from "/src/assets/icons/facebook-icon.png"
+import instagramIcon from "/src/assets/icons/instagram-icon.png"
+import githubIcon from "/src/assets/icons/git-icon.png"
 
 
-import gitIcon from "./../../assets/icons/git-icon-1.png";
-import javaIcon from "./../../assets/icons/java-icon.png";
-import webflowIcon from "./../../assets/icons/webflow-icon.png";
-import figmaIcon from "./../../assets/icons/figma-icon.png";
-import jsIcon from "./../../assets/icons/js-icon.png";
-import postmanIcon from "./../../assets/icons/postman-icon.png";
-import reactIcon from "./../../assets/icons/React-icon.png";
-import scssIcon from "./../../assets/icons/scss-icon.png";
+import gitIcon from "/src/assets/icons/git-icon-1.png";
+import javaIcon from "/src/assets/icons/Java-icon.png";
+import webflowIcon from "/src/assets/icons/webflow-icon.png";
+import figmaIcon from "/src/assets/icons/figma-icon.png";
+import jsIcon from "/src/assets/icons/js-icon.png";
+import postmanIcon from "/src/assets/icons/postman-icon.png";
+import reactIcon from "/src/assets/icons/React-icon.png";
+import scssIcon from "/src/assets/icons/scss-icon.png";
 
 export const socialLinks = [
     { icon: linkedinIcon, title: "Linkedin",   },
