@@ -1,10 +1,10 @@
 
 export const AboutMe = () => {
   return (
-    <section className="about-me">
+    <section id="about-me" className="about-me">
       <img className="about-line" src="/lines/about-line.png" alt="about line" />
       <div className="about-me__container">
-        <h2 className="about-me__title">ABOUT ME</h2>
+        <h2 className="about-me__title">À propos de moi</h2>
 
         <div className="about-me__content">
           <p className="about-me__text">
@@ -22,7 +22,7 @@ export const AboutMe = () => {
             />
             <div className="about-me__info">
               <h3 className="about-me__name">Dylan</h3>
-              <p className="about-me__role">Full Stack Developer</p>
+              <p className="about-me__role">Developpeur FullStack</p>
             </div>
           </div>
         </div>

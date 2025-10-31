@@ -21,7 +21,7 @@ export const Testimonials = () => {
     <section className="testimonials">
       <div className="testimonials__container">
         <div className="testimonials__header">
-          <h2 className="testimonials__title">CLIENT&apos;S TALKS</h2>
+          <h2 className="testimonials__title">AVIS CLIENT&apos;S</h2>
           <div className="testimonials__controls">
             <button
               className="testimonials__btn testimonials__btn--prev"

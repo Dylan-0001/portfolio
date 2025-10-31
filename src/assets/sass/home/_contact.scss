@@ -1,0 +1,122 @@
+@use "./../variables";
+@use "./../mixins";
+
+.contact-line
+{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  margin-top: 0;
+  transform: scaleX(-1);
+  @include mixins.responsive("tablet")
+  {
+    display: none;
+  }
+}
+
+.contact {
+  margin: 0 20%;
+  margin-bottom: 30px;
+
+  &__title {
+    font-size: variables.$title-font-size;
+    font-weight: variables.$title-font-weight;
+    color: variables.$title-color;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+
+  &__intro {
+    color: #555;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 18px;
+  }
+
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+
+
+    label {
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+      font-size: 18px;
+    }
+
+
+    input,
+    textarea {
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      font-size: 1rem;
+      transition: border-color 0.2s;
+      box-shadow: 0 5px 20px rgba(0, 4, 4, 0.25);
+      background: #F8F8F8;
+
+      &:focus {
+        outline: none;
+        border-color: #007bff;
+      }
+    }
+  }
+
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+
+    button {
+      background: #000;
+      color: #fff;
+      border: none;
+      padding: 0.75rem 2rem;
+      border-radius: 50px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: #666;
+      }
+
+
+      &:disabled {
+        background: #aaa;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+
+  &__error {
+    color: #d00;
+    font-size: 0.85rem;
+  }
+
+
+  &__success {
+    color: #0a0;
+    font-size: 0.9rem;
+  }
+
+
+  &__footer {
+    font-size: 0.75rem;
+    color: #777;
+    margin-top: 1.5rem;
+  }
+}

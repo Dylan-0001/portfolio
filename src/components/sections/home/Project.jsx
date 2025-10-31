@@ -6,11 +6,51 @@ import {useState} from "react";
 export const Project = () => {
 
 const projects = [
-  { id: 1, title: "Phone App", image: "/images/project/project-1.png" },
-  { id: 2, title: "Devia Dashboard", image: "/images/project/project-2.png" },
-  { id: 3, title: "UI Concept", image: "/images/project/project-3.png" },
-  { id: 4, title: "MD Design", image: "/images/project/project-4.png" },
-  { id: 5, title: "Mockup Presentation", image: "/images/project/project-5.png" },
+  {
+      id: 1,
+      title: "Phone App",
+      image: "/images/project/project-1.png",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet lorem.",
+      tech: "ReactJs, Java",
+      project_url: "https://github.com/Dylan-0001",
+      project_github: "https://github.com/Dylan-0001",
+  },
+  {
+      id: 2,
+      title: "Devia Dashboard",
+      image: "/images/project/project-2.png",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet lorem.",
+      tech: "ReactJs, NextJs",
+      project_url: "https://github.com/Dylan-0001",
+      project_github: "https://github.com/Dylan-0001",
+  },
+  {
+      id: 3,
+      title: "UI Concept",
+      image: "/images/project/project-3.png",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet lorem.",
+      tech: "ReactJs, NextJs",
+      project_url: "https://github.com/Dylan-0001",
+      project_github: "https://github.com/Dylan-0001",
+  },
+  {
+      id: 4,
+      title: "MD Design",
+      image: "/images/project/project-4.png",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet lorem.",
+      tech: "ReactJs, NextJs",
+      project_url: "https://github.com/Dylan-0001",
+      project_github: "https://github.com/Dylan-0001",
+  },
+  {
+      id: 5,
+      title: "Mockup Presentation",
+      image: "/images/project/project-5.png",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet lorem.",
+      tech: "ReactJs, NextJs",
+      project_url: "https://github.com/Dylan-0001",
+      project_github: "https://github.com/Dylan-0001",
+  },
 ];
 
 
@@ -28,7 +68,7 @@ function handleCloseModal() {
 }
 
 return (
-    <section className="projects">
+    <section id="projects" className="projects">
       
       <img className="project-line" src="/lines/project-line.png" alt="project line" />
 
@@ -39,7 +79,7 @@ return (
             <div className="block-right">
               <img src={projects[1].image} alt={projects[1].title} className="image" onClick={() => handleOpenModal(projects[1])}/>
               <div className="project-card">
-                <h2 className="projects__title">PROJECTS</h2>
+                <h2 className="projects__title"> PROJETS </h2>
               </div>
             </div>
           </div>

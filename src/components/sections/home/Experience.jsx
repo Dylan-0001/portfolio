@@ -7,7 +7,7 @@ export const Experience = () => {
     <section className="experience">
       <div className="experience__container">
         <div className="experience__header">
-          <h2 className="experience__title">EXPERIENCE</h2>
+          <h2 className="experience__title">EXPÉRIENCES</h2>
           <button className="experience__btn">See All Work</button>
         </div>
 

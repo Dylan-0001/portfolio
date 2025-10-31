@@ -4,32 +4,38 @@ import { socialLinks } from './data/Data';
 export const Footer = () => {
 
     const webLinks = [
-        { text: 'Home',    },
-        { text: 'Project', },
-        { text: 'About',   },
-        { text: 'Contact', }
+        { text: 'Home', href: 'home-hero' },
+        { text: 'Project', href: 'projects' },
+        { text: 'About', href: 'about-me' },
+        { text: 'Contact', href: 'contact' }
     ];
 
     return (
         <footer>
             <div className="container">
                 <div className="informations">
-                    <h2>Dylan Portfolio</h2>
+                    <h2>Portfolio</h2>
                     <p>“ Life is not about waiting for the storms to pass.”</p>
-                    <div className="github-button">
-                        <img src="/icons/git-icon.png" alt="GitHub icon" />
-                        <p className="github-name">My Github Page</p>
-                    </div>
+                    <a href="https://github.com/Dylan-0001">
+                        <div className="github-button">
+                            <img src="/icons/git-icon.png" alt="GitHub icon" />
+                            <p className="github-name">Mon Github</p>
+                        </div>
+                    </a>
                 </div>
                 <div className="socials">
                     <div className="links">
                         {webLinks.map((link, index) => (
-                            <p key={"weblink-" + index}>{link.text}</p>
+                            <a href={"#" + link.href} key={index}>
+                                <p key={"weblink-" + index}>{link.text}</p>
+                            </a>
                         ))}
                     </div>
                     <div className="links">
                         {socialLinks.map((link, index) => (
-                            <p key={"sociallink-" + index}>{link.title}</p>
+                            <a href={link.href} key={index}>
+                                <p key={"sociallink-" + index}>{link.title}</p>
+                            </a>
                         ))}
                     </div>
                 </div>

@@ -6,10 +6,10 @@ export const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     
     const headerLink = [
-        { text: 'Home' },
-        { text: 'Project' },
-        { text: 'About' },
-        { text: 'Contact' }
+        { text: 'Home', href: 'home-hero' },
+        { text: 'Project', href: 'projects' },
+        { text: 'About', href: 'about-me' },
+        { text: 'Contact', href: 'contact' }
     ];
 
     useEffect(() => {
@@ -60,7 +60,7 @@ export const Header = () => {
                 <ul className={`nav-links ${isOpen ? "open" : ""}`}>
                     {headerLink.map((item, index) => (
                         <li key={index} onClick={handleLinkClick}>
-                            {item.text}
+                            <a href={'#' + item.href}>{item.text}</a>
                         </li>
                     ))}
                 </ul>

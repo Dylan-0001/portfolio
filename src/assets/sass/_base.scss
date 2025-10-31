@@ -7,6 +7,10 @@
   font-family: variables.$text-font;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 a 
 {
   color: inherit;

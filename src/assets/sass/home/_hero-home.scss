@@ -22,26 +22,26 @@
     font-size: 52px;
     font-weight: variables.$title-font-weight;
     color: variables.$title-color;
-    @include mixins.responsive("mobile") 
-    {    
+    @include mixins.responsive("mobile")
+    {
       font-size: 30px;
       margin-top: 5%;
     }
   }
 
-  .hero-container 
+  .hero-container
   {
     justify-content: center;
     align-items: center;
     margin-top: 5%;
     display: flex;
-    
-    @include mixins.responsive("mobile") 
-    {    
+
+    @include mixins.responsive("mobile")
+    {
       display: flex;
       flex-direction: column-reverse;
-    }     
-    
+    }
+
     .fake-nav-bar
     {
       position: absolute;
@@ -52,17 +52,17 @@
       width: 30%;
       max-width: 300px;
 
-      @include mixins.responsive("tablet") 
-      {    
+      @include mixins.responsive("tablet")
+      {
         left: 5%;
         width: 25%;
       }
-      @include mixins.responsive("mobile") 
-      {    
+      @include mixins.responsive("mobile")
+      {
         position: relative;
         width: 90%;
         left: 0;
-      }     
+      }
 
       .fake-search-bar
       {
@@ -80,8 +80,8 @@
           font-weight: bold;
           margin-left: 10px;
           font-size: 18px;
-          @include mixins.responsive("tablet") 
-          {    
+          @include mixins.responsive("tablet")
+          {
             font-size: 14px;
           }
         }
@@ -90,11 +90,18 @@
       .rs-item
       {
         display: flex;
-        margin-left: 15px;
-        margin-bottom: 35px;
+        padding: 10px 0;
+        padding-left: 15px;
+        margin-bottom: 15px;
         gap: 15px;
-        @include mixins.responsive("mobile") 
-        {    
+        transition: all 0.1s ease;
+
+        &:hover{
+          background-color: #eaeaea;
+        }
+
+        @include mixins.responsive("mobile")
+        {
           margin-bottom: 25px;
         }
         p
@@ -125,21 +132,21 @@
         width: 70%;
         margin-left: 15%;
         margin-right: 15%;
-        @include mixins.responsive("tablet") 
-        {    
+        @include mixins.responsive("tablet")
+        {
           width: 60%;
           margin-left: 20%;
           margin-right: 20%;
         }
-        @include mixins.responsive("tablet") 
-        {    
+        @include mixins.responsive("tablet")
+        {
           width: 50%;
           margin-left: 25%;
           margin-right: 25%;
         }
       }
 
-      .hero-badge 
+      .hero-badge
       {
         position: absolute;
         background: white;
@@ -149,11 +156,11 @@
         font-size: 21px;
         font-weight: 600;
         white-space: nowrap;
-        @include mixins.responsive("mobile") 
-        {    
+        @include mixins.responsive("mobile")
+        {
           font-size: 13px;
         }
-        &--backend 
+        &--backend
         {
           top: 110%;
           left: 0;
@@ -161,18 +168,18 @@
           display: flex;
           gap: 10px;
           align-items: center;
-          @include mixins.responsive("tablet") 
-          {    
+          @include mixins.responsive("tablet")
+          {
             left: 30%;
             top: 100%
           }
-          @include mixins.responsive("mobile") 
-          {    
+          @include mixins.responsive("mobile")
+          {
             display: none;
           }
         }
 
-        &--web 
+        &--web
         {
           top: 30%;
           right: -20%;
@@ -180,13 +187,13 @@
           display: flex;
           gap: 10px;
           align-items: center;
-          @include mixins.responsive("mobile") 
-          {    
+          @include mixins.responsive("mobile")
+          {
             display: none;
           }
         }
 
-        &--available 
+        &--available
         {
           bottom: 5%;
           right: -10%;
@@ -202,18 +209,18 @@
           align-items: center;
           gap: 8px;
           animation-delay: 1s;
-          @include mixins.responsive("tablet") 
-          {    
+          @include mixins.responsive("tablet")
+          {
             bottom: 15%;
           }
-          @include mixins.responsive("mobile") 
-          {    
+          @include mixins.responsive("mobile")
+          {
             right: 70%;
             bottom: 80%;
           }
         }
 
-        &--branding 
+        &--branding
         {
           bottom: 100%;
           left: -10%;
@@ -221,13 +228,13 @@
           display: flex;
           gap: 10px;
           align-items: center;
-          @include mixins.responsive("tablet") 
-          {    
+          @include mixins.responsive("tablet")
+          {
             left: 70%;
             bottom: 90%;
           }
-          @include mixins.responsive("mobile") 
-          {    
+          @include mixins.responsive("mobile")
+          {
             display: none;
           }
         }
@@ -243,40 +250,37 @@
       }
     }
   }
-
-  .hero-roles 
-  {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+  .hero-roles {
     margin-top: 10%;
     font-size: 3vw;
     font-weight: 600;
-    overflow-x: hidden;
 
-    gap: 2vw;
-
-    &__item 
-    {
-      color: black;
+    &__item-group {
+      display: flex;
+      align-items: center;
+      gap: 2vw;
       margin-right: 2vw;
     }
 
-    &__dot 
-    {
+    &__item {
+      color: black;
+      white-space: nowrap;
+    }
+
+    &__dot {
       transform: rotate(45deg);
       width: 25px;
       height: 25px;
       border-radius: 3px;
       background: linear-gradient(
-        45deg,
-        #fe5249 0%,
-        #f45668 31%,
-        #f2759c 65%,
-        #e72791 100%
+                      45deg,
+                      #fe5249 0%,
+                      #f45668 31%,
+                      #f2759c 65%,
+                      #e72791 100%
       );
       display: inline-block;
+      flex-shrink: 0;
     }
   }
 }

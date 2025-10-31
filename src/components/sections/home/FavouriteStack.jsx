@@ -7,7 +7,7 @@ export const FavouriteStack = () => {
     <section className="favourite-stack">
       <img className="stack-line" src="/lines/stack-line.png" alt="stack line" />
       <div className="favourite-stack__container">
-        <h2 className="favourite-stack__title">FAVOURITE STACK</h2>
+        <h2 className="favourite-stack__title">STACK PRÉFÉRÉ</h2>
 
         <div className="favourite-stack__grid">
           {technologies.map((tech, i) => (

@@ -1,14 +1,14 @@
 export const socialLinks = [
-    { icon: "/icons/linkedin-icon.png", title: "Linkedin",   },
-    { icon: "/icons/facebook-icon.png", title: "Facebook",   },
-    { icon: "/icons/instagram-icon.png", title: "Instagram", },
-    { icon: "/icons/git-icon.png", title: "Github",       },
+    { icon: "/icons/linkedin-icon.png", title: "Linkedin", href: "https://www.linkedin.com/" },
+    { icon: "/icons/facebook-icon.png", title: "Facebook", href: "https://www.facebook.com/" },
+    { icon: "/icons/instagram-icon.png", title: "Instagram", href: "https://www.instagram.com/" },
+    { icon: "/icons/git-icon.png", title: "Github", href: "https://github.com/Dylan-0001" },
 ];
 
 export const rolesBanner = [
-    { role: "Backend Developer"},
-    { role: "Software Engineer"},
-    { role: "Frontend Developer"},
+    { role: "Developpeur Frontend" },
+    { role: "Integrateur Webflow"},
+    { role: "Developpeur Backend"},
 ]
 
 export const experiences = [
@@ -106,14 +106,14 @@ export const testimonials = [
     },
     {
       id: 2,
-      name: "Haizen",
+      name: "Alan",
       role: "CEO of Octopia",
       rating: 5,
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet lorem. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, quis aliquam.",
     },
     {
       id: 3,
-      name: "NKRI",
+      name: "Killian",
       role: "CEO of Jarvis",
       rating: 5,
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet lorem. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, quis aliquam.",

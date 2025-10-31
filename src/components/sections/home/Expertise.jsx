@@ -7,7 +7,7 @@ export const Expertise = () => {
     <section className="expertise">
       <img className="expertise-line" src="/lines/expertise-line.png" alt="expertise line" />
       <div className="expertise__container">
-        <h2 className="expertise__title">MY EXPERTISE</h2>
+        <h2 className="expertise__title">MES COMPÉTENCES</h2>
 
         <div className="expertise__grid">
           {expertises.map((item, i) => (
