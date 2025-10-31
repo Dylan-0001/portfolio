@@ -1,5 +1,5 @@
-import { experiences } from "../../components/data/Data";
-import { ExperienceCard } from "../../components/ExperienceCard";
+import { experiences } from "@/components/data/Data";
+import { ExperienceCard } from "@/components/ExperienceCard";
 
 export const Experience = () => {
 
@@ -12,8 +12,8 @@ export const Experience = () => {
         </div>
 
         <div className="experience__grid">
-          {experiences.map((exp) => (
-            <ExperienceCard list={exp}/>
+          {experiences.map((exp, i) => (
+            <ExperienceCard key={i} list={exp}/>
           ))}
         </div>
       </div>

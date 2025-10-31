@@ -9,6 +9,7 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 5%;
+  margin-top: 2%;
   @include mixins.responsive("tablet") 
   {    
     margin-top: 10%;
@@ -20,6 +21,7 @@
     position: absolute;
     left: 0;
     z-index: -1;
+    transform: scaleX(-1);
     @include mixins.responsive("tablet") 
     {    
       display: none;
@@ -33,6 +35,10 @@
     display: flex;
     margin: 0 10%;
     width: fit-content;
+
+    img{
+      cursor: pointer;
+    }
 
     @include mixins.responsive("tablet") 
     {    
@@ -170,10 +176,12 @@
         max-width: 90%;
       }
     }
+
   }
    
   &__button 
   {
+    display: none;
     margin-top: 3rem;
     background: #000;
     color: #fff;
@@ -196,5 +204,10 @@
     {    
       width: 90%;
     }
+  }
+
+  .modal-container
+  {
+    background-color: red;
   }
 }

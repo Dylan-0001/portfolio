@@ -260,6 +260,7 @@
     &__item 
     {
       color: black;
+      margin-right: 2vw;
     }
 
     &__dot 
@@ -275,6 +276,7 @@
         #f2759c 65%,
         #e72791 100%
       );
+      display: inline-block;
     }
   }
 }

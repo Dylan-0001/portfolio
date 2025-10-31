@@ -1,5 +1,4 @@
 import { StarIcon } from 'lucide-react';
-import avatarImage from './../assets/images/bit-mojie.png';
 
 export const TestimonialCard = ({testimonial, index, currentIndex}) => {
 
@@ -9,7 +8,7 @@ export const TestimonialCard = ({testimonial, index, currentIndex}) => {
                 <div className="infos">
                   <div className="testimonials__avatar">
                     <img
-                      src={avatarImage}
+                      src="/images/bit-mojie.png"
                       alt="Dylan Avatar"
                       className="about-me__avatar"
                     />

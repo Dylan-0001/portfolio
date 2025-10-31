@@ -1,10 +1,10 @@
-import {Link} from "react-router";
+import Link from "next/link";
 
-export const ErrorPage = () => {
+export default function notFound () {
     return (
         <div style={{ padding: "2rem", textAlign: "center", marginTop: "2rem" }}>
             <p style={{ fontSize: "20px" }}>Une erreur est survenue...</p>
-            <Link to="/">Retour à l'accueil</Link>
+            <Link href="/">Retour à l'accueil</Link>
         </div>
     )
 }

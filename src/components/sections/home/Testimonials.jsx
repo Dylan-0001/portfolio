@@ -1,7 +1,9 @@
+"use client"
+
 import { ChevronLeft, ChevronRight} from 'lucide-react';
-import { useState } from 'react';
-import { TestimonialCard } from '../../components/TestimonialCard';
-import { testimonials } from '../../components/data/Data';
+import { TestimonialCard } from '@/components/TestimonialCard';
+import { testimonials } from '@/components/data/Data';
+import {useState} from "react";
 
 export const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -40,7 +42,7 @@ export const Testimonials = () => {
 
         <div className="testimonials__carousel">
           {testimonials.map((testimonial, index) => (
-            <TestimonialCard testimonial={testimonial} index={index} currentIndex={currentIndex}/>
+            <TestimonialCard key={index} testimonial={testimonial} index={index} currentIndex={currentIndex}/>
           ))}
         </div>
       </div>

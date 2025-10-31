@@ -1,6 +1,5 @@
 
 import { socialLinks } from './data/Data';
-import gitIcon from '/src/assets/icons/git-icon.png';
 
 export const Footer = () => {
 
@@ -18,7 +17,7 @@ export const Footer = () => {
                     <h2>Dylan Portfolio</h2>
                     <p>“ Life is not about waiting for the storms to pass.”</p>
                     <div className="github-button">
-                        <img src={gitIcon} alt="GitHub icon" />
+                        <img src="/icons/git-icon.png" alt="GitHub icon" />
                         <p className="github-name">My Github Page</p>
                     </div>
                 </div>

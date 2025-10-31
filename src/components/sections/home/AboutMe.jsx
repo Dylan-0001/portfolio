@@ -1,10 +1,8 @@
-import avatarImage from '../../assets/images/bit-mojie.png';
-import aboutLine from "/src/assets/lines/about-line.png";
 
 export const AboutMe = () => {
   return (
     <section className="about-me">
-      <img className="about-line" src={aboutLine} alt="about line" />
+      <img className="about-line" src="/lines/about-line.png" alt="about line" />
       <div className="about-me__container">
         <h2 className="about-me__title">ABOUT ME</h2>
 
@@ -18,7 +16,7 @@ export const AboutMe = () => {
 
           <div className="about-me__profile">
             <img
-              src={avatarImage}
+              src="/images/bit-mojie.png"
               alt="Dylan Avatar"
               className="about-me__avatar"
             />

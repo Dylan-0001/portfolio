@@ -1,5 +1,5 @@
 import { SearchIcon } from "lucide-react";
-import { socialLinks } from "./data/Data";
+import { socialLinks } from "@/components/data/Data";
 
 
 export const FakeSearchBar = () => {
